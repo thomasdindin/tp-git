@@ -14,77 +14,66 @@ ls -a
 •	Ouvrir ce répertoire sous VS Code
 •	Exécuter git status et copier/coller la sortie
 
-•	On branch master
-•	
-•	No commits yet
-•	
-•	nothing to commit (create/copy files and use "git add" to track)
+On branch master
+No commits yet
+nothing to commit (create/copy files and use "git add" to track)
 
 •	Créer le fichier fichier1.md avec un contenu quelconque et l'enregistrer
 •	Créer le fichier fichier2.md avec un contenu quelconque et l'enregistrer
 •	Exécuter git status et copier/coller la sortie
-•	On branch master
-•	
-•	No commits yet
-•	
-•	Untracked files:
-•	  (use "git add <file>..." to include in what will be committed)
-•	        fichier1.md
-•	        fichier2.md
-•	
-•	nothing added to commit but untracked files present (use "git add" to track)
+On branch master
+No commits yet
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+fichier1.md
+fichier2.md
+nothing added to commit but untracked files present (use "git add" to track)
 •	Ajouter fichier1.md à l'index de Git (zone de Staging)
 •	Exécuter git status et copier/coller la sortie
-•	On branch master
-•	
-•	No commits yet
-•	
-•	Changes to be committed:
-•	  (use "git rm --cached <file>..." to unstage)
-•	        new file:   fichier1.md
-•	
-•	Untracked files:
-•	  (use "git add <file>..." to include in what will be committed)
-•	        fichier2.md
+On branch master
+No commits yet
+Changes to be committed:
+(use "git rm --cached <file>..." to unstage)
+new file:   fichier1.md
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+fichier2.md
 •	Créer un commit avec pour message : "Ajout de fichier1.md"
 •	Exécuter git status et copier/coller la sortie
-•	On branch master
-•	Untracked files:
-•	  (use "git add <file>..." to include in what will be committed)
-•	        fichier2.md
-•	
-•	nothing added to commit but untracked files present (use "git add" to track)
+On branch master
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+fichier2.md
+nothing added to commit but untracked files present (use "git add" to track)
 •	Modifier fichier1.md et enregistrer
 •	Exécuter git status et copier/coller la sortie
-•	On branch master
-•	Changes not staged for commit:
-•	  (use "git add <file>..." to update what will be committed)
-•	  (use "git restore <file>..." to discard changes in working directory)
-•	        modified:   fichier1.md
-•	
-•	Untracked files:
-•	  (use "git add <file>..." to include in what will be committed)
-•	        fichier2.md
-•	
-•	no changes added to commit (use "git add" and/or "git commit -a")
+On branch master
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+modified:   fichier1.md
+Untracked files:
+(use "git add <file>..." to include in what will be committed)fichier2.md
+no changes added to commit (use "git add" and/or "git commit -a")
+
 •	Ajouter fichier1.md et fichier2.md à la zone de Staging
 •	Créer un commit "Ajout de fichier2.md et modification de fichier1.md"
 •	Copier/coller l'ID des deux premiers commits : 
 o	ID commit 1 : 5355d6ae370d11042db2133fccb426f86e86505e
 o	ID commit 2 : b27ff37e6605bfcb2a16d95c8461ac6b87a76b15
 •	Que signifie qu'un fichier est "tracked" ou "untracked" ?
-o	Un fichier est tracked si git a connaissance de ce fichier (git add), sinon il est untracked 
+Un fichier est tracked si git a connaissance de ce fichier (git add), sinon il est untracked 
 •	Pourquoi doit-on passer les fichiers par la zone de Staging (l'index) avant de les committer ?
-o	Pour choisir les fichiers à commit afin de ne pas commit quelque chose qu’on ne voudrait pas
+Pour choisir les fichiers à commit afin de ne pas commit quelque chose qu’on ne voudrait pas
 •	Créer une branche fonctionnalite1
-•	Git branch fonctionnalite1
+git branch fonctionnalite1
 •	Lister les branches
-•	Git branch
+git branch
 •	Se déplacer sur la branche fonctionnalite1
-•	Git checkout fonctionnalite1
+git checkout fonctionnalite1
 •	Lister les branches
 •	Que représente l'étoile à côté des noms des branches ?
-•	Cela représente la branche sur laquelle on se situe
+Cela représente la branche sur laquelle on se situe
 •	Créer un nouveau fichier fichier3.md
 •	Modifier le fichier fichier2.md 
 o	Comment utiliser VS Code pour qu'il nous montre les différences entre l'ancienne version de fichier2.md et la version courante que l'on vient d'éditer ?
@@ -96,7 +85,7 @@ Cliquer sur « source control » puis cliquer sur le fichier désiré
 •	Afficher la liste des fichiers du répertoire
 ls
 •	Se déplacer sur la branche master
-Git checkout master
+git checkout master
 •	Afficher la liste des fichiers du répertoire
 ls
 •	Pourquoi les deux sorties sont-elles différentes ? Les fichiers ont-ils disparus ?
@@ -131,7 +120,7 @@ Cela signfie que git va pointer master vers le dernier commit de la branche fusi
 •	Effectuer cette fusion
 Git merge fonctionnalite2
 •	Noter le changement dans l'onglet Git Graph. Que signifie la mention Merge made by the ... strategy indiquée par la sortie de la commande ?
-Qu’il a uttilisé une stratégie différente du fast forwarding pour merge les deux branches
+Qu’il a uttilisé une stratégie différente du fast forwarding pour merge les deux branches, ici ort
 
 •	Quelle est la différence fondamentale avec la fusion précédente ?
 Ici, la branche est divergente de la branche master donc elle ne peut pas simplement prendre le dernier commit
@@ -142,9 +131,9 @@ On clique sur le commit, puis sur le nom du fichier.
 
 •	Tenter de fusionner la branche fonctionnalite3 avec master 
 o	Que se passe-t-il et pourquoi ?
-•	Auto-merging fichier1.md
-•	CONFLICT (content): Merge conflict in fichier1.md
-•	Automatic merge failed; fix conflicts and then commit the result.
+Auto-merging fichier1.md
+CONFLICT (content): Merge conflict in fichier1.md
+Automatic merge failed; fix conflicts and then commit the result.
 Il y a un problème car le contenu des fichiers est différent pour le même fichier
 •	Lancer un git status 
 o	Que doit-on faire si on veut annuler la fusion en cours ?
@@ -174,6 +163,7 @@ o	Ne pas réutiliser une branche qui a déjà été intégrée pour démarrer un
 o	Nouvelle tâche ? => nouvelle branche à partir d'un commit de la branche d'intégration (en général le plus récent)
 o	Tâche terminée ? => fusion dans la branche d'intégration et suppression de la branche
 •	Supprimer les trois branches fonctionnalitex (attention : on ne peut pas supprimer une branche sur laquelle on est)
+
 git branch - - delete fonctionnalite1
 git branch - -delete fonctionnalite2
 git branch - - delete fonctionnalite3
